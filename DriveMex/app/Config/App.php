@@ -21,7 +21,7 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	public $baseURL = 'drivemex.gearhostpreview.com';
+	public $baseURL = 'http://drivemex.gearhostpreview.com/';
 
 	/*
 	|--------------------------------------------------------------------------
@@ -33,7 +33,7 @@ class App extends BaseConfig
 	| variable so that it is blank.
 	|
 	*/
-	public $indexPage = 'index.php';
+	public $indexPage = 'spark.php';
 
 	/*
 	|--------------------------------------------------------------------------
