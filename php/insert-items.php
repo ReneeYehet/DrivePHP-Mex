@@ -1,4 +1,10 @@
 <?php
+header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Headers: api-version");
+header("Access-Control-Allow-Methods: GET, POST");
+header("Allow: GET");
+defined('BASEPATH') OR exit('No direct script access allowed');
+
 // Tipo 1 = Perú; Tipo 2 = Mex; Tipo 3 = Chile
 require_once '../conexion-drive.php';
 
