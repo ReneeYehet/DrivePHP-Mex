@@ -20,7 +20,7 @@
 				const url = window.location.search;
 				const urlParams = new URLSearchParams(url);
 				const id_cot = urlParams.get('id');
-				var ruta = "insert-items.php";
+				var ruta =  __DIR__ ."php/insert-items.php";
 				const tipo = urlParams.get('tipo');
 
 			    $.ajax({type:'POST',        // call php 

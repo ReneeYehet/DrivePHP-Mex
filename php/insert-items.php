@@ -1,6 +1,6 @@
 <?php
 // Tipo 1 = Perú; Tipo 2 = Mex; Tipo 3 = Chile
-require_once 'conexion-drive.php';
+require_once '../conexion-drive.php';
 
 include('DrivePHP.php');
 include('feed.php');
