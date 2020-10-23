@@ -2,8 +2,8 @@
 // Tipo 1 = Perú; Tipo 2 = Mex; Tipo 3 = Chile
 require_once '../conexion-drive.php';
 
-include('../DrivePHP.php');
-include('../feed.php');
+include('DrivePHP.php');
+include('feed.php');
 
 //$id_cot = isset($_POST['id_cot']) ? $_POST['id_cot'] : 0;
 //$id_cot=$_GET['id'];
