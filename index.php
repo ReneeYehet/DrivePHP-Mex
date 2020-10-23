@@ -20,7 +20,11 @@
 				const url = window.location.search;
 				const urlParams = new URLSearchParams(url);
 				const id_cot = urlParams.get('id');
+<<<<<<< HEAD
 				var ruta = "http://mexdrive.gearhostpreview.com/php/insert-items.php";
+=======
+				var ruta = "/php/insert-items.php";
+>>>>>>> 4dbf9c63c551dbf00c4bf0d59e68bcea9119232e
 				const tipo = urlParams.get('tipo');
 
 			    $.ajax({type:'POST',        // call php 
