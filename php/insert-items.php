@@ -1,14 +1,10 @@
 <?php
-header('Access-Control-Allow-Origin: *');
-header("Access-Control-Allow-Methods: GET, POST");
-header("Allow: POST");
-defined('BASEPATH') OR exit('No direct script access allowed');
 
 // Tipo 1 = Perú; Tipo 2 = Mex; Tipo 3 = Chile
-require_once 'conexion-drive.php';
+require_once '../conexion-drive.php';
 
-include('php/DrivePHP.php');
-include('php/feed.php');
+include('DrivePHP.php');
+include('feed.php');
 
 //$id_cot = isset($_POST['id_cot']) ? $_POST['id_cot'] : 0;
 //$id_cot=$_GET['id'];
