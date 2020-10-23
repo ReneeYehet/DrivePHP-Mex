@@ -8,11 +8,11 @@
 	</head>
 
 	<body>
-		<!--<div class="content">
+		<div class="content">
 			<div class="bar">
 			  <p>Agregando<br>datos</p>
 			</div>
-		</div>-->
+		</div>
 		
 		<?php
 			require_once 'conexion-drive.php';
