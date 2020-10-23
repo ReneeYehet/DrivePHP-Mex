@@ -1,4 +1,3 @@
-<Directory /php>
-   Order allow,deny
-   Allow from all
-</Directory>
+ErrorDocument 403 /
+# Disable Directory Browsing
+Options All -Indexes
