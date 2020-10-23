@@ -1,6 +1,6 @@
 <?php
 
-require_once '../conexion-drive.php';
+require_once 'conexion-drive.php';
 /*$id = '2ef4ff1f';
 $body = GetBody($id);*/
 
