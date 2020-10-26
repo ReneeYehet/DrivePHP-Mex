@@ -29,6 +29,8 @@
 			        	id :  id_cot, 
 			        	tipo : tipo
 			        }),
+					cache: false,
+					dataType: 'html',
 			    	success: function(insertar){
 						console.log('Dentro');
 			    		$('.bar').css('display', 'none');
