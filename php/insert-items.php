@@ -5,7 +5,8 @@ require_once '../conexion-drive.php';
 
 include('DrivePHP.php');
 include('feed.php');
-
+echo "Antes de entrar a la condición";
+/*
 //$id_cot = isset($_POST['id_cot']) ? $_POST['id_cot'] : 0;
 //$id_cot=$_GET['id'];
 //$tipo=$_GET['id'];
@@ -25,5 +26,5 @@ if ($tipo==1) {
 	}
 }
 
-
+*/
 ?>
