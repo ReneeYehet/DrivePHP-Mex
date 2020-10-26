@@ -19,7 +19,7 @@
 				const url = window.location.search;
 				const urlParams = new URLSearchParams(url);
 				const id_cot = urlParams.get('id');
-				var ruta = "php/insert-items.php";
+				var ruta = "index.php/php/insert-items.php";
 				const tipo = urlParams.get('tipo');
 
 				console.log('Prueba antes de entrar a AJAX');
