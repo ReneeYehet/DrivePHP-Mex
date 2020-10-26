@@ -23,7 +23,6 @@
 				const tipo = urlParams.get('tipo');
 
 				console.log('Prueba antes de entrar a AJAX');
-				console.log(ruta);
 			    $.ajax({type:'POST',        // call php 
 			        url: ruta,
 			        data: ({
@@ -31,6 +30,7 @@
 			        	tipo : tipo
 			        }),
 			    	success: function(insertar){
+						console.log('Dentro');
 			    		$('.bar').css('display', 'none');
 			    		if (insertar === "404") {
 				        	$('.content').load('plantillas/error-page.php');
@@ -42,7 +42,7 @@
 				 	   
 					},
 			    });
-				console.log(ruta);
+				
 			    console.log(id_cot);
 			    console.log(tipo);
 			});
