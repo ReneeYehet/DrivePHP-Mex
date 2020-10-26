@@ -22,6 +22,8 @@
 				var ruta = "php/insert-items.php";
 				const tipo = urlParams.get('tipo');
 
+				console.log('Prueba antes de entrar a AJAX');
+				console.log(ruta);
 			    $.ajax({type:'POST',        // call php 
 			        url: ruta,
 			        data: ({
@@ -40,6 +42,7 @@
 				 	   
 					},
 			    });
+				console.log(ruta);
 			    console.log(id_cot);
 			    console.log(tipo);
 			});
