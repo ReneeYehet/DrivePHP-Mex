@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,34 +7,14 @@
 	</head>
 
 	<body>
-		<!--<div class="content">
+		<div class="content">
 			<div class="bar">
-			  <p>Agregando<br>datos</p>
+			  <div class="circle"></div>
+			  <p id="load">Agregando<br>datos</p>
 			</div>
-		</div>-->
+		</div>
 		
-		<?php
-			require_once 'conexion-drive.php';
-
-			include('DrivePHP.php');
-			include('feed.php');
-
-			$id_cot=$_GET['id'];
-			$tipo=$_GET['tipo'];
-
-			if ($tipo==1) {
-				$data = array();
-				$url = GetURL_Mex($id_cot);
-				$data = feed($url);
-				$insertar = InsertXML_Mex($data, $id_cot);
-				if ($insertar) {
-					echo "201";
-				}else{
-					echo "404";
-				}
-			}
-		?>
-		<!--<script type="text/javascript">
+		<script type="text/javascript">
 			$(document).ready(function(){
 				const url = window.location.search;
 				const urlParams = new URLSearchParams(url);
@@ -64,7 +43,7 @@
 			    console.log(id_cot);
 			    console.log(tipo);
 			});
-		</script>-->
+		</script>
 
 		
 		<div class="error_msg" style="width: 100%; text-align: center;"> </div>
