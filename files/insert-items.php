@@ -3,7 +3,7 @@
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json, text/plain');
 header("Access-Control-Allow-Methods: GET, POST");
-header("Allow: POST");
+header("Allow: POST, GET");
 
 
 $id_cot = isset($_POST['id']) ? $_POST['id'] : 0;
