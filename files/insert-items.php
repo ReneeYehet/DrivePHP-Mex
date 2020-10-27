@@ -22,10 +22,10 @@ if(!isXmlHttpRequest())
 else
 {
 	echo 'is an ajax request';
-	$id_cot = isset($_POST['id']) ? $_POST['id'] : 0;
-	$tipo= isset($_POST['tipo']) ? $_POST['tipo'] : 0;
+	echo $id_cot = isset($_POST['id']) ? $_POST['id'] : 0;
+	echo $tipo= isset($_POST['tipo']) ? $_POST['tipo'] : 0;
 
-	switch ($tipo) {
+	/*switch ($tipo) {
 		case '1':
 			$data = array();
 			$url = GetURL_Mex($id_cot);
@@ -41,11 +41,11 @@ else
 		default:
 			# code...
 			break;
-	}
+	}*/
 
 	
 }
-
+require_once '../conexion-drive.php';
 /////////////////////////////////////////////////////////////// MEXICO
 function GetURL_Mex($id){
 	// Get our spreadsheet

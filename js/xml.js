@@ -18,6 +18,8 @@ function CallPHP(id_cot, tipo){
             id :  id_cot, 
             tipo : tipo
         }),
+        cache: false,
+		dataType: "json",
         success: function(insertar){
             $('.bar').css('display', 'none');
             if (insertar === "404") {
