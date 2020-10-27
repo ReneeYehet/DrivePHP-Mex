@@ -8,10 +8,10 @@
 
 	<body>
 		<div class="content">
-			<div class="bar">
+			<!--<div class="bar">
 			  <div class="circle"></div>
 			  <p id="load">Agregando<br>datos</p>
-			</div>
+			</div>-->
 		</div>
 		
 		<script type="text/javascript">
@@ -22,17 +22,13 @@
 				var ruta = "index.php/php/insert-items.php";
 				const tipo = urlParams.get('tipo');
 
-				console.log('Prueba antes de entrar a AJAX');
 			    $.ajax({type:'POST',        // call php 
 			        url: ruta,
 			        data: ({
 			        	id :  id_cot, 
 			        	tipo : tipo
 			        }),
-					cache: false,
-					dataType: 'html',
 			    	success: function(insertar){
-						console.log('Dentro');
 			    		$('.bar').css('display', 'none');
 			    		if (insertar === "404") {
 				        	$('.content').load('plantillas/error-page.php');
@@ -44,7 +40,6 @@
 				 	   
 					},
 			    });
-				
 			    console.log(id_cot);
 			    console.log(tipo);
 			});
