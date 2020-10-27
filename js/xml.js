@@ -19,7 +19,9 @@ function CallPHP(id_cot, tipo){
             tipo : tipo
         }),
         cache: false,
-		dataType: "json",
+        dataType: "json",
+        contentType: "application/json",
+        crossDomain: true,
         success: function(insertar){
             $('.bar').css('display', 'none');
             if (insertar === "404") {

@@ -1,32 +1,20 @@
 <?php
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json, text/plain');
-header("Access-Control-Allow-Methods: GET, POST");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS, DELETE, PUT");
 header("Allow: POST, GET");
-
 include '../conexion-drive.php';
 
-include('DrivePHP.php');
-include('feed.php');
-
+include 'DrivePHP.php';
+include 'feed.php';
 
 $id_cot = isset($_POST['id']) ? $_POST['id'] : 0;
 print $id_cot;
 $tipo= isset($_POST['tipo']) ? $_POST['tipo'] : 0;
 print $tipo;
 
-$data = array();
-$url = GetURL_Mex($id_cot);
-$data = feed($url);
-$insertar = InsertXML_Mex($data, $id_cot);
-if ($insertar) {
-	echo "201";
-}else{
-	echo "404";
-}
 
-
-/*function isXmlHttpRequest()
+function isXmlHttpRequest()
 {
     $header = isset($_SERVER['HTTP_X_REQUESTED_WITH']) ? $_SERVER['HTTP_X_REQUESTED_WITH'] : null;
     return ($header === 'XMLHttpRequest');
@@ -39,10 +27,19 @@ if(!isXmlHttpRequest())
 }
 else
 {
+	
 	echo 'is an ajax request';
+	$data = array();
+	$url = GetURL_Mex($id_cot);
+	$data = feed($url);
+	$insertar = InsertXML_Mex($data, $id_cot);
+	if ($insertar) {
+		echo "201";
+	}else{
+		echo "404";
+	}
 	
-	
-}*/
+}
 
 
 /*switch ($tipo) {
