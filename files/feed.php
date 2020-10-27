@@ -3,7 +3,6 @@ header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json, text/plain');
 header("Access-Control-Allow-Methods: GET, POST");
 header("Allow: GET, POST");
-header('Access-Control-Max-Age: 1728000');
 
 function feed($feedURL){
 

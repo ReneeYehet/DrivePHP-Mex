@@ -1,4 +1,9 @@
 <?php
+header('Access-Control-Allow-Origin: *');
+header('Content-Type: application/json, text/plain');
+header("Access-Control-Allow-Methods: GET, POST");
+header("Allow: POST, GET");
+
 require __DIR__ . '/vendor/autoload.php';
 use Google\Spreadsheet\DefaultServiceRequest;
 use Google\Spreadsheet\ServiceRequestFactory;

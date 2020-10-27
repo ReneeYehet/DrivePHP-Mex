@@ -1,14 +1,13 @@
 <?php
-include '../conexion-drive.php';
-
-include('DrivePHP.php');
-include('feed.php');
-
-
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json, text/plain');
 header("Access-Control-Allow-Methods: GET, POST");
 header("Allow: POST, GET");
+
+include '../conexion-drive.php';
+
+include('DrivePHP.php');
+include('feed.php');
 
 
 $id_cot = isset($_POST['id']) ? $_POST['id'] : 0;
