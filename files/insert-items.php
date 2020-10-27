@@ -3,25 +3,9 @@
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json, text/plain');
 header("Access-Control-Allow-Methods: GET, POST");
-header("Allow: GET, POST");
-header('Access-Control-Max-Age: 1728000');
+header("Allow: POST");
 
 
-
-function isXmlHttpRequest()
-{
-    $header = isset($_SERVER['HTTP_X_REQUESTED_WITH']) ? $_SERVER['HTTP_X_REQUESTED_WITH'] : null;
-    return ($header === 'XMLHttpRequest');
-}
-
-// example - checking our active call
-if(!isXmlHttpRequest())
-{
-    echo 'Not an ajax request';
-}
-else
-{
-	echo 'is an ajax request';
 	echo $id_cot = isset($_POST['id']) ? $_POST['id'] : 0;
 	echo $tipo= isset($_POST['tipo']) ? $_POST['tipo'] : 0;
 
@@ -43,8 +27,23 @@ else
 			break;
 	}*/
 
-	
+/*function isXmlHttpRequest()
+{
+    $header = isset($_SERVER['HTTP_X_REQUESTED_WITH']) ? $_SERVER['HTTP_X_REQUESTED_WITH'] : null;
+    return ($header === 'XMLHttpRequest');
 }
+
+// example - checking our active call
+if(!isXmlHttpRequest())
+{
+    echo 'Not an ajax request';
+}
+else
+{
+	echo 'is an ajax request';
+	
+	
+}*/
 
 /////////////////////////////////////////////////////////////// MEXICO
 function GetURL_Mex($id){
