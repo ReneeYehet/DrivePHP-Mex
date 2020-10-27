@@ -5,19 +5,6 @@ header("Access-Control-Allow-Methods: GET, POST");
 header("Allow: GET, POST");
 header('Access-Control-Max-Age: 1728000');
 
-function isXmlHttpRequest()
-{
-    $header = isset($_SERVER['HTTP_X_REQUESTED_WITH']) ? $_SERVER['HTTP_X_REQUESTED_WITH'] : null;
-    return ($header === 'XMLHttpRequest');
-}
-
-// example - checking our active call
-if(!isXmlHttpRequest())
-{
-    echo 'Not an ajax request';
-}
-else
-{
 
 echo $id_cot = isset($_POST['id']) ? $_POST['id'] : 0;
 echo $tipo= isset($_POST['tipo']) ? $_POST['tipo'] : 0;
@@ -40,7 +27,6 @@ echo $tipo= isset($_POST['tipo']) ? $_POST['tipo'] : 0;
 		break;
 }*/
 
-}
 /*
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 	header('Access-Control-Allow-Origin: *');
