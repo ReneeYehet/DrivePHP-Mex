@@ -1,9 +1,13 @@
 <?php
+header('Access-Control-Allow-Origin: *');
+header('Content-Type: application/json, text/plain');
+header("Access-Control-Allow-Methods: GET, POST");
+header("Allow: GET, POST");
+header('Access-Control-Max-Age: 1728000');
 
 require_once '../conexion-drive.php';
 /*$id = '2ef4ff1f';
 $body = GetBody($id);*/
-
 
 /////////////////////////////////////////////////////////////// MEXICO
 function GetURL_Mex($id){
