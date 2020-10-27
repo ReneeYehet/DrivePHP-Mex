@@ -5,7 +5,7 @@ include '../conexion-drive.php';
 
 include('DrivePHP.php');
 include('feed.php');
-/
+
 //$id_cot = isset($_POST['id_cot']) ? $_POST['id_cot'] : 0;
 //$id_cot=$_GET['id'];
 //$tipo=$_GET['id'];
