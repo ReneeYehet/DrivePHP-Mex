@@ -1,4 +1,21 @@
 <?php
+
+function isXmlHttpRequest()
+{
+    $header = isset($_SERVER['HTTP_X_REQUESTED_WITH']) ? $_SERVER['HTTP_X_REQUESTED_WITH'] : null;
+    return ($header === 'XMLHttpRequest');
+}
+
+// example - checking our active call
+if(!isXmlHttpRequest())
+{
+    echo 'Not an ajax request';
+}
+else
+{
+    echo 'is an ajax request';
+}
+/*
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 	header('Access-Control-Allow-Origin: *');
 	header('Access-Control-Allow-Methods: POST, GET, DELETE, PUT, PATCH, OPTIONS');
@@ -13,11 +30,14 @@ header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 header("Access-Control-Allow-Methods: GET, POST");
 header("Allow: GET, POST");
+header('Access-Control-Max-Age: 1728000');
 
 $ret = [
 	'result' => 'OK',
 ];
 print json_encode($ret);
+
+*/
 /*
 
 // Tipo 1 = Perú; Tipo 2 = Mex; Tipo 3 = Chile
