@@ -20,7 +20,6 @@ function CallPHP(id_cot, tipo){
         }),
         cache: false,
         dataType: "json",
-        contentType: "application/json",
         crossDomain: true,
         success: function(insertar){
             $('.bar').css('display', 'none');
