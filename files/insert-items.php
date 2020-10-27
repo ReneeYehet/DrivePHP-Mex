@@ -1,4 +1,20 @@
 <?php
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: POST, GET, DELETE, PUT, PATCH, OPTIONS');
+header('Access-Control-Allow-Headers: X-Requested-With, Content-Type');
+header('Access-Control-Max-Age: 1728000');
+header('Content-Length: 0');
+header('Content-Type: text/plain');
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+header('Access-Control-Allow-Origin: *');
+header('Content-Type: application/json');
+
+$ret = [
+	'result' => 'OK',
+];
+print json_encode($ret);
+/*
 
 // Tipo 1 = Perú; Tipo 2 = Mex; Tipo 3 = Chile
 include '../conexion-drive.php';
@@ -29,7 +45,7 @@ switch ($tipo) {
 }
 
 
-
+*/
 
 
 //$id_cot = isset($_POST['id_cot']) ? $_POST['id_cot'] : 0;
