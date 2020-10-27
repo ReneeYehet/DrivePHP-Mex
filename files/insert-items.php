@@ -1,14 +1,9 @@
 <?php
 header('Access-Control-Allow-Origin: *');
-header('Content-Type: application/json');
+header('Content-Type: application/json, text/plain');
 header("Access-Control-Allow-Methods: GET, POST");
 header("Allow: GET, POST");
 header('Access-Control-Max-Age: 1728000');
-
-include '../conexion-drive.php';
-
-include('DrivePHP.php');
-include('feed.php');
 
 function isXmlHttpRequest()
 {
@@ -24,10 +19,10 @@ if(!isXmlHttpRequest())
 else
 {
 
-$id_cot = isset($_POST['id']) ? $_POST['id'] : 0;
-$tipo= isset($_POST['tipo']) ? $_POST['tipo'] : 0;
+echo $id_cot = isset($_POST['id']) ? $_POST['id'] : 0;
+echo $tipo= isset($_POST['tipo']) ? $_POST['tipo'] : 0;
 
-switch ($tipo) {
+/*switch ($tipo) {
 	case '1':
 		$data = array();
 		$url = GetURL_Mex($id_cot);
@@ -43,7 +38,7 @@ switch ($tipo) {
 	default:
 		# code...
 		break;
-}
+}*/
 
 }
 /*
