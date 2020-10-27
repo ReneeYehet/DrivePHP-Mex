@@ -1,11 +1,11 @@
 <?php
-/*
+
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json, text/plain');
 header("Access-Control-Allow-Methods: GET, POST");
 header("Allow: GET, POST");
 header('Access-Control-Max-Age: 1728000');
-*/
+
 
 
 function isXmlHttpRequest()
@@ -45,9 +45,10 @@ else
 
 	
 }
-require_once '../conexion-drive.php';
+
 /////////////////////////////////////////////////////////////// MEXICO
 function GetURL_Mex($id){
+	require_once '../conexion-drive.php';
 	// Get our spreadsheet
 $spreadsheet = (new Google\Spreadsheet\SpreadsheetService)
    ->getSpreadsheetFeed()
@@ -74,6 +75,7 @@ $listFeed = $worksheet->getListFeed();
 ///////////////////////////////////////
 
 function InsertXML_Mex($data, $id){
+	require_once '../conexion-drive.php';
 	$spreadsheet = (new Google\Spreadsheet\SpreadsheetService)
 	->getSpreadsheetFeed()
 	->getByTitle('Proceso Cotizaciones');
