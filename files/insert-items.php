@@ -1,4 +1,14 @@
 <?php
+header('Access-Control-Allow-Origin: *');
+header('Content-Type: application/json');
+header("Access-Control-Allow-Methods: GET, POST");
+header("Allow: GET, POST");
+header('Access-Control-Max-Age: 1728000');
+
+include '../conexion-drive.php';
+
+include('DrivePHP.php');
+include('feed.php');
 
 function isXmlHttpRequest()
 {
@@ -13,7 +23,28 @@ if(!isXmlHttpRequest())
 }
 else
 {
-    echo 'is an ajax request';
+
+$id_cot = isset($_POST['id']) ? $_POST['id'] : 0;
+$tipo= isset($_POST['tipo']) ? $_POST['tipo'] : 0;
+
+switch ($tipo) {
+	case '1':
+		$data = array();
+		$url = GetURL_Mex($id_cot);
+		$data = feed($url);
+		$insertar = InsertXML_Mex($data, $id_cot);
+		if ($insertar) {
+			echo "201";
+		}else{
+			echo "404";
+		}
+		break;
+	
+	default:
+		# code...
+		break;
+}
+
 }
 /*
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
