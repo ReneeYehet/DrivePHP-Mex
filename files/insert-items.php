@@ -1,8 +1,10 @@
 <?php
 header('Access-Control-Allow-Origin: *');
+header('Content-Type: application/json, text/plain');
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS, DELETE, PUT");
 
-echo "Hello";
+XML();
+print "Hello";
 function XML(){
 	$id_cot = isset($_POST['id']) ? $_POST['id'] : 0;
 	print $id_cot;
