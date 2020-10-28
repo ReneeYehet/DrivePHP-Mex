@@ -1,7 +1,8 @@
 <?php
 header('Access-Control-Allow-Origin: *');
-header('Content-Type: application/json, text/plain');
-header("Access-Control-Allow-Methods: GET, POST, OPTIONS, DELETE, PUT");
+header('Content-Type: text/html; charset=UTF-8');
+header('Connection: Keep-Alive');
+header('X-Frame-Options: SAMEORIGIN');
 
 define('ROOT_PATH', dirname(__DIR__) . '/');
 XML();
