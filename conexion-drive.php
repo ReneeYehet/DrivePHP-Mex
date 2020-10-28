@@ -1,5 +1,6 @@
 <?php
 header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Methods: GET");
 
 require __DIR__ . '/vendor/autoload.php';
 use Google\Spreadsheet\DefaultServiceRequest;

@@ -3,7 +3,7 @@ header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json, text/plain');
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS, DELETE, PUT");
 
-
+define('ROOT_PATH', dirname(__DIR__) . '/');
 XML();
 print "Hello";
 function XML(){
@@ -17,7 +17,7 @@ function XML(){
 
 /////////////////////////////////////////////////////////////// MEXICO
 function GetURL_Mex($id){
-	require_once '../conexion-drive.php';
+	require_once ROOT_PATH . '../conexion-drive.php';
 	echo "Hello";
 }
 
