@@ -10,6 +10,13 @@ function XML(){
 	print $id_cot;
 	$tipo= isset($_POST['tipo']) ? $_POST['tipo'] : 0;
 	print $tipo;
+	include '../conexion-drive.php';
+
+	include('DrivePHP.php');
+	include('feed.php');
+
+	$url = GetURL_Mex($id_cot);
+	echo $url;
 }
 
 
