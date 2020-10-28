@@ -10,13 +10,34 @@ function XML(){
 	print $id_cot;
 	$tipo= isset($_POST['tipo']) ? $_POST['tipo'] : 0;
 	print $tipo;
-	include '../conexion-drive.php';
-
-	include('DrivePHP.php');
-	include('feed.php');
-
 	$url = GetURL_Mex($id_cot);
 	echo $url;
+}
+
+/////////////////////////////////////////////////////////////// MEXICO
+function GetURL_Mex($id){
+	include '../conexion-drive.php';
+	// Get our spreadsheet
+$spreadsheet = (new Google\Spreadsheet\SpreadsheetService)
+   ->getSpreadsheetFeed()
+   ->getByTitle('Proceso Cotizaciones');
+
+// Get the first worksheet (tab)
+$worksheets = $spreadsheet->getWorksheetFeed()->getEntries();
+$worksheet = $worksheets[4];
+
+$listFeed = $worksheet->getListFeed();
+/** @var ListEntry */
+	foreach ($listFeed->getEntries() as $entry) {
+	   $representative = $entry->getValues();
+	   //echo json_encode($representative);
+	   if ($entry->getValues()['idcotizaciónbase'] === $id) {
+	   	$link = $entry->getValues()['xmlurl'];
+	   	
+	   }
+	}
+	//echo $link;
+	return $link;
 }
 
 
