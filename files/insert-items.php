@@ -17,7 +17,7 @@ function XML(){
 
 /////////////////////////////////////////////////////////////// MEXICO
 function GetURL_Mex($id){
-	require_once 'conexion-drive.php';
+	require_once '../conexion-drive.php';
 	echo "Hello";
 }
 
