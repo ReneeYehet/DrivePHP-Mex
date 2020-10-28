@@ -16,28 +16,7 @@ function XML(){
 
 /////////////////////////////////////////////////////////////// MEXICO
 function GetURL_Mex($id){
-	include '../conexion-drive.php';
-	// Get our spreadsheet
-$spreadsheet = (new Google\Spreadsheet\SpreadsheetService)
-   ->getSpreadsheetFeed()
-   ->getByTitle('Proceso Cotizaciones');
-
-// Get the first worksheet (tab)
-$worksheets = $spreadsheet->getWorksheetFeed()->getEntries();
-$worksheet = $worksheets[4];
-
-$listFeed = $worksheet->getListFeed();
-/** @var ListEntry */
-	foreach ($listFeed->getEntries() as $entry) {
-	   $representative = $entry->getValues();
-	   //echo json_encode($representative);
-	   if ($entry->getValues()['idcotizaciónbase'] === $id) {
-	   	$link = $entry->getValues()['xmlurl'];
-	   	
-	   }
-	}
-	//echo $link;
-	return $link;
+	echo "Hello";
 }
 
 
