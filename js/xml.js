@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 function CallPHP(id_cot, tipo){
     
-    var ruta = "php/insert-items.php";
+    var ruta = "files/insert-items.php";
 
     $.ajax({type:'POST',        // call php 
         url: ruta,
